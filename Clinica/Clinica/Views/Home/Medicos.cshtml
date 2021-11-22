@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Medicos";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Estos son los médicos existentes:</p>
+
+<ul>
+    @foreach (var std in (List<string>)ViewData["Medicos"])
+    {
+        <li>@std</li>
+    }
+</ul>
+
+<strong>@ViewData["Med"]</strong>

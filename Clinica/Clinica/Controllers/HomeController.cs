@@ -1,4 +1,4 @@
-﻿using Clinica.Models;
+﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Clinica.DTOs;
+using Clinica.Services;
+using Clinica.Entities;
 
 namespace Clinica.Controllers
 {
@@ -25,6 +28,13 @@ namespace Clinica.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        public IActionResult Medicos()
+        {
+            var medicos = new List<string>{"Pepe Sanchez", "Aurora Verde", "Paco Lopez"};
+            ViewData["Medicos"] = medicos;
             return View();
         }
 
