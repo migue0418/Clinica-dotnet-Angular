@@ -59,6 +59,23 @@ namespace Clinica.Services
             }
         }
 
+        public MedicoDTO Put(MedicoDTO medicoDTO)
+        {
+            Medico medico = new()
+            {
+                UsuarioID = medicoDTO.UsuarioID,
+                Username = medicoDTO.Username,
+                Nombre = medicoDTO.Nombre,
+                Apellidos = medicoDTO.Apellidos,
+                Clave = medicoDTO.Clave,
+                NumColegiado = medicoDTO.NumColegiado,
+                Citas = new List<Cita>()
+            };
+            clinicaDbContext.Medicos.Add(medico);
+            clinicaDbContext.SaveChanges();
+            return medicoDTO;
+        }
+
         private MedicoDTO MapToDTO(Medico medico)
         {
             MedicoDTO medicoDTO = autoMapper.Map<MedicoDTO>(medico);

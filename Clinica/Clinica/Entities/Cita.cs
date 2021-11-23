@@ -22,10 +22,11 @@ namespace Clinica.Entities
 		*/
 		[Required]
 		public Paciente Paciente { get; set; }         // relacion 0..* a 1 (una cita pertenece a 1 paciente)
+		public int PacienteID { get; set; }
 
 		[Required]
 		public Medico Medico { get; set; }              // relacion 0..* a 1 (una cita pertenece a 1 medico)
-
+		public int MedicoID { get; set; }
 		public Diagnostico Diagnostico { get; set; }    // relacion 1 a 1 (en una cita se da un diagnostico)
 	}
 }

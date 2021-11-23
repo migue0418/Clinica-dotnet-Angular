@@ -10,7 +10,7 @@ namespace Clinica.DTOs
         public int CitaID { get; set; }
         public DateTime FechaHora { get; set; }
         public string MotivoCita { get; set; }
-        public string PacienteNSS { get; set; }
-        public int MedicoNumColegiado { get; set; }
+        public int PacienteID { get; set; }
+        public int MedicoID { get; set; }
     }
 }

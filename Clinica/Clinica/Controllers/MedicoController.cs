@@ -41,9 +41,16 @@ namespace Clinica.Controllers
             return medicos;
         }
 
+        // Add Paciente
+        [HttpPost]
+        public ActionResult<MedicoDTO> AddUsuario(MedicoDTO medicoDTO)
+        {
+            return medicoService.Put(medicoDTO);
+        }
+
         // Remove User
         [HttpDelete("{id}")]
-        public ActionResult RemoveUser(int id)
+        public ActionResult RemoveMedico(int id)
         {
             if (medicoService.Delete(id))
             {

@@ -13,6 +13,7 @@ namespace Clinica.Services
         //    Diagnostico EmitirDiagnostico(Cita cita, Paciente paciente);
         public List<MedicoDTO> GetAll();
         public MedicoDTO Get(int id);
+        public MedicoDTO Put(MedicoDTO medicoDTO);
         public bool Delete(int id);
     }
 }

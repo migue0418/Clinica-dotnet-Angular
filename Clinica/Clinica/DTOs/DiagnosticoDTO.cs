@@ -10,6 +10,6 @@ namespace Clinica.DTOs
         public int DiagnosticoID { get; set; }
         public string ValoracionEspecialista { get; set; }
         public string Enfermedad { get; set; }
-        //public int CitaID { get; set; }
+        public int CitaID { get; set; }
     }
 }
